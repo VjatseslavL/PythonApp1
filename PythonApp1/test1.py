@@ -1,3 +1,6 @@
+import string as xstring
+
+
 string = "str"   # type = str
 string1 = 'str1'   # type = str
 doc = """ documentation """   # type = str
@@ -9,7 +12,7 @@ s = "s\np\ta\nbbb"   # \n - следующая строка, \t - сдвиг в�
 
 print(s)
 
-r = r"C:\SDA2''\ASD\SD"   # это сырая строка - он выводит всё как есть в строке
+r = r"C:\SDA2''\ASD\SD"   # это сырая строка - он выводит всё как есть
 
 print(r)   # C:\SDA2''\ASD\SD
 
@@ -40,4 +43,53 @@ print("STR".isupper())  # состоит ли буквы вверхнем рег
 print("\n".isspace())  # состоит ли специальные симловы \n в строке - True
 print(string.upper())  # сделать строку в вверхнем регистре - STR
 print(string.lower())  # сделать строку в нижнем регистре - str
-print(string)
+print(string.startswith("st"))  # True - начинается ли литерал с необходимых элементов
+print(string.endswith("r"))  # True - ищет элемент в конце литерала
+x = list(string)
+print("".join(x))  # str - обьединяет литералы из списка
+
+print("ord".center(70, "="))
+
+xdict = {}
+for i in xstring.ascii_letters:
+    xdict[f"{i}"] = ord(i)
+
+print(xdict)
+
+print("chr".center(70, "="))
+
+xdict = {}
+for i in list(xstring.ascii_letters):
+    xdict[ord(i)] = chr(ord(i))
+
+print(xdict)
+
+print(xstring.ascii_letters.capitalize())
+
+print(string.center(20, "-"))
+
+x = "fillpilldill"
+
+print(x.count("i", 2, 10))
+
+print("     str".expandtabs())
+
+print("     str".lstrip())
+
+print("str".rstrip())
+
+print("        str             ".strip())
+
+print(string.partition(" "))
+
+print(string.rpartition(" "))
+
+print("str".swapcase(), "STR".swapcase())
+
+print(string.title())
+
+print(x.zfill(20))
+
+print(string.ljust(20, "0"))
+
+print(string.rjust(20, "0"))

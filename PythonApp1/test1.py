@@ -8,7 +8,7 @@ doc = ''' documentation '''   # type = str
 
 print(type(doc))  
 
-s = "s\np\ta\nbbb"   # \n - следующая строка, \t - сдвиг вправо
+s = "s\np\ta\nbbb"   # \n - следующая строка, \t - сдвиг вправо, это специальные симловы литералов
 
 print(s)
 
@@ -52,7 +52,7 @@ print("ord".center(70, "="))
 
 xdict = {}
 for i in xstring.ascii_letters:
-    xdict[f"{i}"] = ord(i)
+    xdict[f"{i}"] = ord(i)  # получение индекса в системе ASCII 
 
 print(xdict)
 
@@ -60,36 +60,36 @@ print("chr".center(70, "="))
 
 xdict = {}
 for i in list(xstring.ascii_letters):
-    xdict[ord(i)] = chr(ord(i))
+    xdict[ord(i)] = chr(ord(i))  # получение симлова из индекса в системе ASCII 
 
 print(xdict)
 
-print(xstring.ascii_letters.capitalize())
+print(xstring.ascii_letters.capitalize())  # Первый симлов строки делает заглавной всё остальное в нижний регистр
 
-print(string.center(20, "-"))
+print(string.center(20, "-"))  #  дополняет строку с обеих сторон симловы тем самым выравнилая нужный элемент
 
 x = "fillpilldill"
 
-print(x.count("i", 2, 10))
+print(x.count("i", 2, 10))  # совершает подсчёт указонного симлова
 
-print("     str".expandtabs())
+print("     str".expandtabs())  #  уберает отступы 
 
-print("     str".lstrip())
+print("     str".lstrip())  #  уберает отступы с левой стороны
 
-print("str".rstrip())
+print("str".rstrip())  # уберает отступы с правой стороны
 
-print("        str             ".strip())
+print("        str             ".strip())  # с обеих сторон убирает отступы
 
-print(string.partition(" "))
+print(string.partition(" "))  # 
 
-print(string.rpartition(" "))
+print(string.rpartition(" "))  # 
 
-print("str".swapcase(), "STR".swapcase())
+print("str".swapcase(), "STR".swapcase())  # преобразует строку в другой регистр
 
-print(string.title())
+print(string.title())  #  Делает первый символ в заглавную 
 
-print(x.zfill(20))
+print(x.zfill(20))  #   Заполняет строку до необхадимого количества симловов
 
-print(string.ljust(20, "0"))
+print(string.ljust(20, "0"))  # Заполняет строку до необхадимого количества симловов
 
-print(string.rjust(20, "0"))
+print(string.rjust(20, "0"))  # Заполняет строку до необхадимого количества симловов / наобарот
